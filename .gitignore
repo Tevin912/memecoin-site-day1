@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# SSH keys (private keys should never be committed)
+mkdir memecoin-site-day1
+mkdir memecoin-site-day1.pub
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp 
