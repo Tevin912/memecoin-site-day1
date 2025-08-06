@@ -1,4 +1,4 @@
-# $KYLIE Style Guide
+# $KYLIE Style Guide - Updated
 
 ## Brand Overview
 **$KYLIE** - The College Dog Memecoin on Solana
@@ -64,7 +64,8 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 
 ### Navigation
 - **Background**: Transparent
-- **Logo**: $KYLIE in bold
+- **Logo**: $KYLIE in bold, fixed positioning
+- **Logo Position**: Fixed at top-left (top: 2rem, left: 2rem)
 - **Mobile Menu**: Hamburger icon
 - **Height**: Minimal, clean design
 
@@ -72,7 +73,7 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 - **Background**: Dark brown gradient
 - **Layout**: 2-column grid
 - **Title**: "The College Dog" (3.5rem, bold)
-- **Social Icons**: Positioned at top-right corner (top: -2.5rem, right: -6rem)
+- **Social Icons**: Fixed at top-right corner (top: 2rem, right: 2rem)
 - **Button**: Orange gradient with pulse animation
 
 ### Story Section
@@ -93,6 +94,8 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 - **Cards**: Glass morphism effect with backdrop blur
 - **Step Numbers**: Orange gradient circles (70px)
 - **Hover Effects**: Scale, lift, and shimmer animations
+- **Steps**: 1) Create Wallet, 2) Get SOL, 3) Swap for $KYLIE, 4) Community
+- **Final Step**: "Connect with fellow degens on X and telegram"
 
 ### Footer
 - **Background**: Orange gradient
@@ -108,10 +111,12 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 - **Pulse Animation**: For call-to-action buttons
 
 ### Social Icons
-- **Size**: 1.8rem
+- **Size**: 1.8rem (desktop), 1.5rem (mobile)
 - **Color**: White (#FEFEFE)
 - **Hover**: Opacity change and lift animation
-- **Positioning**: Absolute positioning for hero section
+- **Positioning**: Fixed positioning at top-right corner
+- **Icons**: X (𝕏) and Telegram (Font Awesome icon)
+- **Gap**: 1.5rem (desktop), 1rem (mobile)
 
 ### Cards & Hover Effects
 - **How to Buy Cards**: Scale (1.02), lift (-8px), enhanced shadow
@@ -135,7 +140,7 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 
 ### Breakpoints
 - **Mobile**: max-width: 768px
-- **Tablet**: 768px - 1200px
+- **Tablet**: max-width: 1024px
 - **Desktop**: 1200px+
 
 ### Mobile Adaptations
@@ -143,6 +148,8 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 - **Story**: Single column layout
 - **Timeline**: Left-aligned with padding
 - **Navigation**: Hidden links, mobile menu button
+- **Logo**: Smaller size (1.5rem), positioned at top-left (1rem, 1rem)
+- **Social Icons**: Smaller size (1.5rem), positioned at top-right (1rem, 1rem)
 
 ## Content Guidelines
 
@@ -190,6 +197,23 @@ A heartwarming memecoin inspired by a real Shiba Inu who goes to college with he
 - **Buttons**: Enhanced focus states
 - **Interactive elements**: Clear hover and focus states
 
+## Recent Updates (Latest Session)
+
+### Fixed Positioning Elements
+- **Logo**: Changed to fixed positioning (top-left corner)
+- **Social Icons**: Changed to fixed positioning (top-right corner)
+- **Responsive Spacing**: Added responsive breakpoints for better display consistency
+
+### Content Updates
+- **Hero Title**: Simplified to "The College Dog" (removed "Kylie")
+- **How to Buy Step 4**: Updated to "Community - Connect with fellow degens on X and telegram"
+- **Image Fixes**: Fixed case sensitivity issues (CLAY-KYLIE.png → clay-kylie.png)
+
+### Layout Improvements
+- **Symmetrical Positioning**: Logo on left mirrors social icons on right
+- **Consistent Spacing**: Both elements use same positioning values across breakpoints
+- **Mobile Optimization**: Responsive adjustments for tablet and mobile devices
+
 ---
 
-*This style guide reflects the current state of the $KYLIE website as of the latest updates, including the repositioned social icons, updated hero title, and enhanced interactive elements.* 
+*This style guide reflects the current state of the $KYLIE website as of the latest updates, including fixed positioning elements, responsive improvements, and content refinements.* 
