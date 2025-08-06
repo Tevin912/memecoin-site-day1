@@ -138,12 +138,12 @@ body {
 }
 
 .hero-social-top {
-    position: absolute;
-    top: 1rem;
+    position: fixed;
+    top: 2rem;
     right: 2rem;
     display: flex;
     gap: 1.5rem;
-    z-index: 3;
+    z-index: 1000;
 }
 
 .hero-social-top .social-link {
