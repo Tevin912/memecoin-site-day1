@@ -9,609 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-orange: #FF6B35;
-            --secondary-brown: #8B4513;
-            --campus-green: #4CAF50;
-            --academic-blue: #2196F3;
-            --vibrant-yellow: #FFD700;
-            --text-dark: #2C3E50;
-            --text-light: #7F8C8D;
-            --white: #FFFFFF;
-            --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-            --gradient-secondary: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
-            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
-            --shadow-hard: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: transparent;
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #FEFEFE;
-            margin-left: -8rem;
-        }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #FEFEFE;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
 
-        .nav-links a:hover {
-            color: var(--white);
-        }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #FEFEFE;
-            cursor: pointer;
-        }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
 
 
 
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
 
-        .hero-text h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #FEFEFE;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
 
-        .hero-text p {
-            font-size: 1.2rem;
-            color: #FEFEFE;
-            margin-bottom: 2rem;
-        }
 
-        .hero-image {
-            text-align: right;
-            position: relative;
-            align-self: flex-end;
-            margin-bottom: -20px;
-        }
 
-        .hero-image img {
-            max-width: 60%;
-            height: auto;
-            box-shadow: var(--shadow-hard);
-            transform: translateX(-20%);
-            object-fit: cover;
-            object-position: top;
-        }
 
-        /* Live Stats */
-        .live-stats {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
 
-        .stat-item {
-            text-align: center;
-            color: var(--white);
-        }
 
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-            color: var(--white);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            margin-left: 1rem;
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-orange);
-        }
-
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        /* Story Section */
-        .story {
-            background: var(--white);
-        }
-
-        .story-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .story-text h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-orange);
-        }
-
-        .story-text p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .story-image img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: var(--shadow-soft);
-        }
-
-        /* Tokenomics */
-        .tokenomics {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .tokenomics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .tokenomics-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s ease;
-        }
-
-        .tokenomics-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .tokenomics-card i {
-            font-size: 3rem;
-            color: var(--primary-orange);
-            margin-bottom: 1rem;
-        }
-
-        .tokenomics-card h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .tokenomics-card p {
-            color: var(--text-light);
-        }
-
-        /* Roadmap */
-        .roadmap {
-            background: var(--white);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--gradient-primary);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 55%;
-        }
-
-        .timeline-content {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow-soft);
-            position: relative;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-orange);
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            right: -60px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            left: -60px;
-        }
-
-        .timeline-content h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-orange);
-        }
-
-        /* How to Buy */
-        .how-to-buy {
-            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-            color: var(--white);
-        }
-
-        .how-to-buy .section-title {
-            color: var(--white);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .step-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .step-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .step-number {
-            background: #FEFEFE;
-            color: var(--text-dark);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 0 auto 1rem;
-        }
-
-        /* Community Links */
-        .community {
-            background: var(--white);
-        }
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .social-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--text-dark);
-        }
-
-        .social-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hard);
-        }
-
-        .social-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .social-card.twitter i { color: #1DA1F2; }
-        .social-card.telegram i { color: #0088cc; }
-        .social-card.discord i { color: #7289DA; }
-        .social-card.dexscreener i { color: #00D4AA; }
-
-        /* Meme Gallery */
-        .meme-gallery {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .meme-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.3s ease;
-        }
-
-        .meme-card:hover {
-            transform: scale(1.05);
-        }
-
-        .meme-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .meme-card-content {
-            padding: 1.5rem;
-        }
-
-        .meme-card h4 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .meme-card p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section a {
-            color: var(--text-light);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-orange);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .story-content {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 50px;
-            }
-
-            .timeline-content::before {
-                left: -35px !important;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -620,14 +38,7 @@
             <div class="logo">
                 <span>$KYLIE</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#story">Story</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#how-to-buy">How to Buy</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
+
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -637,13 +48,19 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-social-top">
+                <a href="#" class="social-link">𝕏</a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            </div>
             <div class="hero-text">
-                <h1>Meet Kylie - The College Shiba</h1>
+                <h1>The College Dog</h1>
                 <p>The most heartwarming memecoin on Solana! Join Kylie, the beloved Shiba Inu who goes to college with her owner, in this incredible journey of friendship, loyalty, and community.</p>
                 <a href="#how-to-buy" class="btn btn-primary pulse">Buy $KYLIE</a>
             </div>
-            <div class="hero-image">
-                <img src="https://tevin912.github.io/memecoin-site-day1/assets/soild-Kylie.PNG" alt="Kylie the College Shiba">
+            <div class="hero-right">
+                <div class="hero-image">
+                    <img src="assets/CLAY-KYLIE.png" alt="Kylie the College Shiba">
+                </div>
             </div>
         </div>
     </section>
@@ -654,52 +71,13 @@
             <h2 class="section-title">Kylie's Story</h2>
             <div class="story-content">
                 <div class="story-text">
-                    <h3>The Campus Celebrity</h3>
-                    <p>Kylie isn't just any Shiba Inu - she's a college student! Every day, she accompanies her owner to campus, becoming the unofficial mascot of the university. From attending lectures to making friends in the quad, Kylie brings joy and laughter wherever she goes.</p>
-                    <p>Her gentle nature and adorable expressions have made her a social media sensation, with students sharing photos of her studying in the library, playing in the campus gardens, and even "graduating" with her own tiny cap and gown.</p>
-                    <p>Now, Kylie's story is becoming a movement. The Kylie Coin represents more than just a memecoin - it's about community, education, and the unbreakable bond between humans and their furry friends.</p>
+                    <h3>The Original Campus Degen</h3>
+                    <p>Kylie isn't just another Shiba Inu - she's the first college dog to go full degen! While other dogs chase balls, Kylie's chasing alpha, attending lectures, and building the most based community on campus. She's not just a pet, she's a movement.</p>
+                    <p>From going viral on TikTok to becoming the unofficial campus legend, Kylie's turned every lecture into her personal TED talk. Students can't stop sharing her adventures - whether she's "studying" in the library or "networking" at the coffee shop, she's always building her empire.</p>
+                    <p>Now Kylie's ready to revolutionize the memecoin space. $KYLIE isn't just another token - it's the first college-themed memecoin with genuine community spirit. No complex utility? Perfect. We're here for the culture, the memes, and the most authentic degen energy on Solana. Time to make history! 🚀</p>
                 </div>
                 <div class="story-image">
-                    <img src="https://tevin912.github.io/memecoin-site-day1/assets/2a79f3b2-f263-448e-ad83-3ce12ac1c2c0.jpg" alt="Kylie on Campus">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tokenomics Section -->
-    <section id="tokenomics" class="section tokenomics">
-        <div class="container">
-            <h2 class="section-title">Tokenomics</h2>
-            <div class="tokenomics-grid">
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-coins"></i>
-                    <h4>Total Supply</h4>
-                    <p>1,000,000,000 KYLIE</p>
-                </div>
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-lock"></i>
-                    <h4>Liquidity Locked</h4>
-                    <p>80% for 1 Year</p>
-                </div>
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-fire"></i>
-                    <h4>Burn Mechanism</h4>
-                    <p>2% of Each Transaction</p>
-                </div>
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-users"></i>
-                    <h4>Community Rewards</h4>
-                    <p>3% to Holders</p>
-                </div>
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Education Fund</h4>
-                    <p>5% for Scholarships</p>
-                </div>
-                <div class="tokenomics-card fade-in-up">
-                    <i class="fas fa-heart"></i>
-                    <h4>Charity Donations</h4>
-                    <p>2% to Animal Shelters</p>
+                    <img src="assets/travle-kylie.png" alt="Traveling Kylie">
                 </div>
             </div>
         </div>
@@ -712,26 +90,35 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h4>Phase 1: Launch & Community</h4>
-                        <p>Website launch, social media presence, community building, initial liquidity provision, and first exchange listings.</p>
+                        <h4>Phase 1: Freshman Frenzy</h4>
+                        <p>Kylie and her owner kick off college and web3 chaos. Launch $KYLIECOIN with a 1 trillion token supply, burning 10% for "tuition." Hype on X with dorm livestreams of Kylie chewing a Ledger Nano and owner battling gas fees. Community votes on Kylie's major—Art History takes the lead. Expect FOMO pumps and rug pull memes as they learn the blockchain ropes.</p>
+                    </div>
+                    <div class="timeline-kylie">
+                        <img src="assets/kylie-head.png" alt="Kylie">
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h4>Phase 2: Growth & Partnerships</h4>
-                        <p>Major exchange listings, influencer partnerships, merchandise launch, and educational content creation.</p>
+                        <h4>Phase 2: Sophomore Slump</h4>
+                        <p>Mid-college struggles hit! Launch "Kylie's Kennel" staking pool with toga NFT rewards. Fix a bug that minted 1% extra tokens—oops! Host a "midterm moonshot" with TikToks of Kylie flunking calculus. Partner with decentralized art platforms for graduation cap NFTs. Price swings mirror exam stress.</p>
+                    </div>
+                    <div class="timeline-kylie">
+                        <img src="assets/kylie-wink.png" alt="Kylie Wink">
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h4>Phase 3: Ecosystem Expansion</h4>
-                        <p>NFT collection, university partnerships, and real-world adoption initiatives.</p>
+                        <h4>Phase 3: Junior Jitters</h4>
+                        <p>Kylie preps for the real world. Form a DAO to pick her thesis ("Why Bones Beat Bitcoin"). Airdrop tokens to holders surviving a "bear market bootcamp" (50% dip proof). Launch "Kylie's Chow Chow" DeFi yield farm with wild APYs. Host meme contests and build a metaverse campus to dodge student loans!</p>
+                    </div>
+                    <div class="timeline-kylie">
+                        <img src="assets/kylie-thumbs-up.png" alt="Kylie Thumbs Up">
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h4>Phase 4: Global Recognition</h4>
-                        <p>International expansion, major brand partnerships, philanthropic initiatives, and mainstream adoption.</p>
+                        <h4>Phase 4: Senior Send-Off</h4>
+                        <p>Graduation glory! Burn 20% of $KYLIECOIN supply to "pay debt." Community votes on Kylie's job—crypto influencer wins. Owner cashes out for treats. Drop "Kylie Commencement" NFTs with diploma art, funding a web3 dev scholarship. List on a tier-1 DEX as Kylie barks at the charts!</p>
                     </div>
                 </div>
             </div>
@@ -739,88 +126,29 @@
     </section>
 
     <!-- How to Buy Section -->
-    <section id="how-to-buy" class="section how-to-buy">
+    <section class="how-to-buy">
         <div class="container">
             <h2 class="section-title">How to Buy $KYLIE</h2>
-            <div class="steps-grid">
-                <div class="step-card">
+            <div class="buy-steps">
+                <div class="step">
                     <div class="step-number">1</div>
-                    <h4>Get SOL</h4>
-                    <p>Purchase Solana (SOL) from any major exchange like Coinbase, Binance, or FTX.</p>
+                    <h3>Create a Wallet</h3>
+                    <p>Download Phantom or Solflare wallet from your app store</p>
                 </div>
-                <div class="step-card">
+                <div class="step">
                     <div class="step-number">2</div>
-                    <h4>Send to Wallet</h4>
-                    <p>Transfer your SOL to a Phantom wallet or any Solana-compatible wallet.</p>
+                    <h3>Get SOL</h3>
+                    <p>Buy SOL from any major exchange and send to your wallet</p>
                 </div>
-                <div class="step-card">
+                <div class="step">
                     <div class="step-number">3</div>
-                    <h4>Connect to Raydium</h4>
-                    <p>Visit Raydium.io and connect your wallet to the platform.</p>
+                    <h3>Swap for $KYLIE</h3>
+                    <p>Use Raydium or Jupiter to swap SOL for $KYLIE tokens</p>
                 </div>
-                <div class="step-card">
+                <div class="step">
                     <div class="step-number">4</div>
-                    <h4>Swap for $KYLIE</h4>
-                    <p>Search for $KYLIE token and swap your SOL for $KYLIE tokens.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Links Section -->
-    <section id="community" class="section community">
-        <div class="container">
-            <h2 class="section-title">Join Our Community</h2>
-            <div class="social-grid">
-                <a href="#" class="social-card twitter">
-                    <i class="fab fa-twitter"></i>
-                    <h4>Twitter</h4>
-                    <p>Follow for updates and memes</p>
-                </a>
-                <a href="#" class="social-card telegram">
-                    <i class="fab fa-telegram"></i>
-                    <h4>Telegram</h4>
-                    <p>Join the community chat</p>
-                </a>
-                <a href="#" class="social-card discord">
-                    <i class="fab fa-discord"></i>
-                    <h4>Discord</h4>
-                    <p>Connect with other holders</p>
-                </a>
-                <a href="#" class="social-card dexscreener">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>DexScreener</h4>
-                    <p>Track price and volume</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meme Gallery Section -->
-    <section id="gallery" class="section meme-gallery">
-        <div class="container">
-            <h2 class="section-title">Kylie Photo Gallery</h2>
-            <div class="gallery-grid">
-                <div class="meme-card">
-                    <img src="https://tevin912.github.io/memecoin-site-day1/assets/Kylie-icon.jpg" alt="Kylie Meme 1">
-                    <div class="meme-card-content">
-                        <h4>Study Buddy</h4>
-                        <p>Kylie helping with homework</p>
-                    </div>
-                </div>
-                <div class="meme-card">
-                    <img src="https://tevin912.github.io/memecoin-site-day1/assets/soild-Kylie.jpg" alt="Kylie Meme 2">
-                    <div class="meme-card-content">
-                        <h4>Campus Life</h4>
-                        <p>Making friends in the quad</p>
-                    </div>
-                </div>
-                <div class="meme-card">
-                    <img src="https://tevin912.github.io/memecoin-site-day1/assets/2a79f3b2-f263-448e-ad83-3ce12ac1c2c0.jpg" alt="Kylie Meme 3">
-                    <div class="meme-card-content">
-                        <h4>Graduation Day</h4>
-                        <p>Kylie's big moment</p>
-                    </div>
+                    <h3>Join the Community</h3>
+                    <p>Connect with fellow degens on Twitter and Discord</p>
                 </div>
             </div>
         </div>
@@ -830,33 +158,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>$KYLIE</h4>
-                    <p>The most heartwarming memecoin on Solana, inspired by a real Shiba Inu who goes to college.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="#story">Story</a>
-                    <a href="#tokenomics">Tokenomics</a>
-                    <a href="#roadmap">Roadmap</a>
-                    <a href="#how-to-buy">How to Buy</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Community</h4>
-                    <a href="#">Twitter</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">Discord</a>
-                    <a href="#">DexScreener</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 $KYLIE. All rights reserved. This is not financial advice.</p>
+                <p class="footer-text">Wen moon? Wen treats? 🚀🐕</p>
             </div>
         </div>
     </footer>
