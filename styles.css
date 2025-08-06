@@ -55,7 +55,7 @@ body {
     font-weight: 700;
     font-size: 1.8rem;
     color: #FEFEFE;
-    margin-left: -8rem;
+    margin-left: 0;
 }
 
 .nav-links {
@@ -549,6 +549,17 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-social-top {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -598,6 +609,21 @@ body {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .hero-social-top {
+        top: 1rem;
+        right: 1rem;
+        gap: 1rem;
+    }
+
+    .hero-social-top .social-link {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-left: 0;
     }
 }
 
