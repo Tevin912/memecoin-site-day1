@@ -139,8 +139,8 @@ body {
 
 .hero-social-top {
     position: absolute;
-    top: -2.5rem;
-    right: -6rem;
+    top: 1rem;
+    right: 2rem;
     display: flex;
     gap: 1.5rem;
     z-index: 3;
