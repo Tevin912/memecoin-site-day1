@@ -55,9 +55,16 @@ body {
     font-weight: 700;
     font-size: 1.8rem;
     color: #FEFEFE;
+}
+
+.hero-logo {
     position: fixed;
     top: 2rem;
     left: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FEFEFE;
     z-index: 1000;
 }
 
@@ -558,7 +565,7 @@ body {
         right: 1.5rem;
     }
 
-    .logo {
+    .hero-logo {
         top: 1.5rem;
         left: 1.5rem;
     }
@@ -625,7 +632,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .logo {
+    .hero-logo {
         font-size: 1.5rem;
         top: 1rem;
         left: 1rem;
