@@ -58,9 +58,9 @@ body {
 }
 
 .hero-logo {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
+    position: absolute;
+    top: -1rem;
+    left: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
@@ -148,9 +148,9 @@ body {
 }
 
 .hero-social-top {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
+    position: absolute;
+    top: -1rem;
+    right: 0;
     display: flex;
     gap: 1.5rem;
     z-index: 1000;
@@ -561,13 +561,13 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-social-top {
-        top: 1.5rem;
-        right: 1.5rem;
+        top: -0.5rem;
+        right: 0;
     }
 
     .hero-logo {
-        top: 1.5rem;
-        left: 1.5rem;
+        top: -0.5rem;
+        left: 0;
     }
 }
 
@@ -623,8 +623,8 @@ body {
     }
 
     .hero-social-top {
-        top: 1rem;
-        right: 1rem;
+        top: 0;
+        right: 0;
         gap: 1rem;
     }
 
@@ -634,8 +634,8 @@ body {
 
     .hero-logo {
         font-size: 1.5rem;
-        top: 1rem;
-        left: 1rem;
+        top: 0;
+        left: 0;
     }
 }
 
